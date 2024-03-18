@@ -16,6 +16,7 @@ The Multiplication Operator * multiplies values
 The Comparison Operator > compares values
 
 Types of JavaScript Operators
+
 There are different types of JavaScript operators:
 -Arithmetic Operators
 -Assignment Operators
@@ -179,3 +180,108 @@ Provides a structural representation of the document
 Defines the way that that structure is to be accessed from script
 This allows you to get at the web page as a structured group of nodes. Essentially, it connects web pages to scripts or programming languages.
 The JavaScript syntax has to do with objects. To access an object, property, or method, its reference must include every object that contains it, separated by a dot. This is called the "dot syntax".
+
+1.Object- a JavaScript object is any scriptable HTML element, that is, any HTML element within a document that may be accessed through the JavaScript language. Although the browser window is not an HTML element, it too is a scriptable object.
+
+2.Property
+Objects have properties, which you can think of as characteristics of an object. A JavaScript property has a similar relationship to the object it belongs to that an HTML tag attribute has to the tag that contains it. For example, the JavaScript "value" property is to a text field object as the HTML "width" attribute is to a table tag.
+
+3.Method
+Methods are actions that can be applied directly to objects. Within a web page, methods cause a boring old HTML document to react to the end user. This results in a meaningful experience for the end user which would otherwise be completely one-sided. A parameter is simply information needed by a method in order to accomplish its task.
+
+Here are a Few JavaScript Methods:
+
+-alert() causes an alert dialog box to appear over the page that launched it
+-write() writes content to a page
+-focus() causes the mouse cursor to be inserted into a form element
+
+Core APIs in the DOM
+document and window objects are the objects whose interfaces you generally use most often in DOM programming. In simple terms, the window object represents something like the browser, and the document object is the root of the document itself. Element inherits from the generic Node interface, and together these two interfaces provide many of the methods and properties you use on individual elements. 
+
+The following is a brief list of common APIs in web and XML page scripting using the DOM.
+
+-document.getElementById(id)
+-document.getElementsByTagName(name)
+-document.createElement(name)
+-parentNode.appendChild(node)
+-element.innerHTML
+-element.style.left
+-element.setAttribute
+-element.getAttribute
+-element.addEventListener
+-window._content
+-window.onload
+-window.dump()
+-window.scrollTo()
+
+DAY 2
+
+JAVASCRIPT APIS
+
+API stands for Application Programming Interface.
+A Web API is an application programming interface for the Web.
+A Browser API can extend the functionality of a web browser.
+A Server API can extend the functionality of a web server.
+
+What Is a Regular Expression? 
+
+A regular expression is a sequence of characters that forms a search pattern. 
+A regular expression can be a single character, or a more complicated pattern. 
+Regular expressions can be used to perform all types of text search and text replace operations. 
+
+DAY 3
+JAVASCRIPT FORMS
+
+Constraint Validation DOM Methods
+
+Property                  	Description
+checkValidity()	            Returns true if an input element contains valid data.
+setCustomValidity()	        Sets the validationMessage property of an input element.
+If an input field contains invalid data, display a message
+
+Constraint Validation DOM Properties
+
+Property	                Description
+validity	                Contains boolean properties related to the validity of an input element.
+validationMessage	        Contains the message a browser will display when the validity is false.
+Validity Properties
+The validity property of an input element contains a number of properties related to the validity of data:
+
+Property                              	Description
+customError                           	Set to true, if a custom validity message is set.
+patternMismatch	                        Set to true, if an element's value does not match its pattern attribute.
+rangeOverflow	                          Set to true, if an element's value is greater than its max attribute.
+rangeUnderflow	                        Set to true, if an element's value is less than its min attribute.
+stepMismatch	                          Set to true, if an element's value is invalid per its step attribute.
+tooLong	                                Set to true, if an element's value exceeds its maxLength attribute.
+typeMismatch	                          Set to true, if an element's value is invalid per its type attribute.
+valueMissing	                          Set to true, if an element (with a required attribute) has no value.
+valid                                 	Set to true, if an element's value is valid.
+willValidate	                          Indicates if an input element will be validated.
+
+JAVASCRIPT SWITCH STATEMENT
+
+The switch statement is used to perform different actions based on different conditions
+
+This is how it works: 
+
+The switch expression is evaluated once. 
+The value of the expression is compared with the values of each case. 
+If there is a match, the associated block of code is executed. 
+If there is no match, the default code block is executed. 
+
+Example: 
+
+The getDay() method returns the weekday as a number between 0 and 6. 
+(Sunday=0, Monday=1, Tuesday=2 ..)
+
+Strict Comparison: 
+
+Switch cases use strict comparison (===). 
+The values must be of the same type to match. 
+A strict comparison can only be true if the operands are of the same type. 
+
+DAY 4
+
+JAVASCRIPT EVE
+
