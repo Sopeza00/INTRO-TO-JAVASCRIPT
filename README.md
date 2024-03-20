@@ -281,7 +281,229 @@ Switch cases use strict comparison (===).
 The values must be of the same type to match. 
 A strict comparison can only be true if the operands are of the same type. 
 
-DAY 4
+WEEK 3
 
-JAVASCRIPT EVE
+DAY 1
+
+JAVA SCRIPT EVENTS
+
+JavaScript's interaction with HTML is handled through events that occur when the user or the browser manipulates a page. When the page loads, it is called an event. When the user clicks a button, that clicks to is called an event. Developers use these events to execute javascript coded responses,which cause buttons to close windows, messages to be displayed to users, data to be validated, and virtually any other type of response imaginable.
+
+STRINGS OPERATORS
+
+Strings can be created as primitives, from string literals, or as objects, using the String() constructor
+String primitives and string objects can be used interchangeably in most situations.
+JavaScript distinguishes between String objects and primitive string values. (The same is true of Boolean and Numbers.) 
+String literals (denoted by double or single quotes) and strings returned from String calls in a non-constructor context (that is, called without using the new keyword) are primitive strings. JavaScript automatically converts primitives to String objects, so that it's possible to use String object methods for primitive strings. In contexts where a method is to be invoked on a primitive string or a property lookup occurs, JavaScript will automatically wrap the string primitive and call the method or perform the property lookup.
+String primitives and String objects also give different results when using eval(). Primitives passed to eval are treated as source code; String objects are treated as all other objects are, by returning the object.
+
+ON-EVENT HANDLERS
+
+The on-event handlers are a group of properties offered by DOM elements to help manage how that element reacts to events. Elements can be interactive (e.g. links, buttons, images, forms) or non-interactive (e.g. the base document). The on-event handler is usually named according to the event it is designed to react to, such as onclick, onkeypress, onfocus, etc.
+object can have only one on-event handler for a given event (though that handler could call multiple sub-handlers). This is why addEventListener() is often the better way to get notified of events, especially when wishing to apply various event handlers independently from each other, even for the same event and/or to the same element.
+ on-event handlers are called automatically, not at the programmer's will (although you can do so, such as with mybutton.onclick(myevent);) since they serve more as placeholders to which a real handler function can be assigned.
+ 
+ Event handler’s parameters, this binding, and the return value
+ 
+ When the event handler is specified as an HTML attribute, the specified code is wrapped into a function with the following parameters:
+
+-event - for all event handlers, except onerror.
+-event, source, lineno, colno, and error for the onerror event handler.
+
+The event parameter usually contains the eroor massage as a string.
+
+When the event handler is invoked, this keyword inside the handler is set to the DOM element on which the handler is registered. The return value from the handler determines if the event is cancelled.
+
+The term event handler may be used to refer to:
+
+-any function or object registered to be notified of events,
+-or, more specifically, to the mechanism of registering event listeners via on... attributes in HTML or properties in web APIs, such as <button onclick="alert(this)"> or window.onload = function() { /* ... */ }.
+The EventTarget method addEventListener() sets up a function that will be called whenever the specified event is delivered to the target.
+this  type on the EventTarget on which it's called. 
+
+target.addEventListener(type, listener[, options]);
+target.addEventListener(type, listener[, useCapture]);
+
+EVENT HANDLER SPECIFIC RULES
+
+
+Attribute and Descriptions
+
+onabort
+
+Invoked when an event has been aborted. For example, the browser stops fetching media data before it is completely downloaded.
+
+oncancel
+
+cancel event handler.
+
+oncanplay
+
+Invoked when the browser/user agent can start playing media, but hasn't yet, due to buffering. In other words, if playback were to begin now, it wouldn't play right to the end (due to the current playback rate) - it would need to pause during playback in order to load the rest of the media.
+
+oncanplaythrough
+
+The browser/user agent estimates that if playback were to begin now, the media resource could be rendered at the current playback rate all the way to its end without having to stop for further buffering.
+
+onchange
+
+User has changed the object, then attempts to leave that field (i.e. clicks elsewhere).
+
+onclick
+
+Invoked when the user clicked on the object.
+
+oncuechange
+
+cuechange event handler.
+
+ondblclick
+
+Invoked when the user clicked twice on the object.
+
+ondurationchange
+
+Invoked when the length of the media is changed (i.e. the duration attribute has just been updated).
+
+onemptied
+
+Invoked when a media resource element suddenly becomes empty (for example, due to a network error).
+
+onended
+
+Invoked when the media has reached the end.
+
+oninput
+
+input event handler.
+
+oninvalid
+
+invalid event handler.
+
+onkeydown
+
+Invoked when a key was pressed over an element.
+
+onkeypress
+
+Invoked when a key was pressed over an element then released.
+
+onkeyup
+
+Invoked when a key was released over an element.
+
+onloadeddata
+
+Invoked when the browser/user agent can render the media data at the current playback position for the first time.
+
+onloadedmetadata
+
+Invoked when the browser/user agent has just determined the duration and dimensions of the media resource.
+
+onloadstart
+
+Invoked when the browser/user agent has started loading the media resource.
+
+onmousedown
+
+The cursor moved over the object and the mouse/pointing device was pressed down.
+
+onmouseenter
+
+The cursor enters the outer element (not the inner element). Therefore, does not fire again if the cursor enters a descendant of this element.
+
+onmouseleave
+
+The cursor leaves the element.
+
+onmousemove
+
+The cursor moved while hovering over an object.
+
+onmouseout
+
+The cursor moved off the object
+
+onmouseover
+
+The cursor moved over the object (i.e. user hovers the mouse over the object).
+
+onmouseup
+
+The mouse/pointing device was released after being pressed down.
+
+onmousewheel
+
+Invoked when the mouse wheel is being rotated.
+
+onpause
+
+Invoked when the media resource has been paused.
+
+onplay
+
+Invoked when the media resource starts playback.
+
+onplaying
+
+Playback has begun.
+
+onprogress
+
+The browser/user agent is fetching media data.
+
+onratechange
+
+Invoked when the playback rate has changed (i.e. either the defaultPlaybackRate or the playbackRate has just been updated).
+
+onreset
+
+reset event handler.
+
+onseeked
+
+Invoked when the seeking IDL attribute changed to false (i.e. the seeking attribute is no longer true)
+
+onseeking
+
+Invoked when the seeking IDL attribute changed to true and the seek operation is taking long enough that the user agent has time to fire the event.
+
+onselect
+
+Invoked when some or all of the contents of an object is selected. For example, the user selected some text within a text field.
+
+onshow
+
+show event handler.
+
+onstalled
+
+Invoked when the browser/user agent is trying to fetch media data but the data has stalled (i.e. the data has stopped coming).
+
+onsubmit
+
+User submitted a form.
+
+onsuspend
+
+The browser/user agent is (intentionally) not currently fetching media data, but has not yet downloaded the entire media resource (i.e. it has suspended the download).
+
+ontimeupdate
+
+Invoked when the media's current playback position changed.
+
+ontoggle
+
+Invoked when the details element is opened or closed.
+
+onvolumechange
+
+Invoked when either the volume attribute or the muted attribute has changed.
+
+onwaiting
+
+The next frame of the media is not yet available (but the browser/user agent expects it to become available).
+
+
 
